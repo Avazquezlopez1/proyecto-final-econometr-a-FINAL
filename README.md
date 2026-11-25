@@ -27,17 +27,19 @@ Base mensual de **120 observaciones** (enero 2016 – diciembre 2025), construid
 | Ingreso de los hogares | Remesas | Banco de México, SIE |
 | Precios | Inflación anual; precios reales de automóviles, gasolina, seguro, trámites, reparación y transporte público | Banco de México e INEGI (INPC) |
 
-- Archivo utilizado: [`Data/dataset 6.csv`](Data/dataset%206.csv)
-- Diccionario de datos, transformaciones y referencias en formato APA: [`Data/Diccionario.md`](Data/Diccionario.md)
-
 ## Metodología
 
 1. **Exploración:** estadísticas descriptivas, serie de tiempo, estacionalidad, gráficas de dispersión y matriz de correlaciones.
-2. **Regresión por MCO** de log(ventas) con 11 ficticias de mes (enero como referencia) y una ficticia de COVID (abril–junio 2020). Se comparan cuatro especificaciones: base, ingreso y crédito, completa y reducida (modelo principal).
-3. **Errores estándar Newey-West** (4 rezagos), porque los residuos están autocorrelacionados.
-4. **Diagnóstico:** VIF, experimento de eliminar una variable a la vez, y pruebas de Breusch-Pagan, Durbin-Watson, Ljung-Box y Jarque-Bera.
-5. **Robustez:** tendencia lineal, desocupación en lugar del IGAE, muestra sin 2020 y errores estándar convencionales.
-6. **Regularización:** Ridge y Lasso con validación cruzada temporal, como complemento frente a la multicolinealidad.
+
+3. **Regresión por MCO** de log(ventas) con 11 variables ficticias de mes (enero como referencia) y una variable ficticia de COVID (abril–junio 2020). Se comparan cuatro especificaciones: base, ingreso y crédito, completa y reducida (el modelo principal).
+
+5. **Errores estándar Newey-West** (4 rezagos), porque los residuos están autocorrelacionados.
+
+7. **Diagnóstico:** VIF, experimento de eliminar una variable a la vez, y pruebas de Breusch-Pagan, Durbin-Watson, Ljung-Box y Jarque-Bera.
+
+9. **Robustez:** tendencia lineal, desocupación en lugar del IGAE, muestra sin 2020 y errores estándar convencionales.
+
+11. **Regularización:** Ridge y Lasso con validación cruzada temporal, como complemento frente a la multicolinealidad.
 
 ## Principales resultados
 
@@ -52,39 +54,9 @@ Base mensual de **120 observaciones** (enero 2016 – diciembre 2025), construid
 - **Robustez:** al agregar una tendencia lineal, el efecto negativo de las remesas desaparece y el crédito automotriz se vuelve positivo y significativo. Parte de esas asociaciones era crecimiento común en el tiempo.
 - **Ridge y Lasso:** Ridge regresa la inflación y la desocupación a su signo esperado y reduce a la mitad el coeficiente de las remesas. Lasso solo elimina el precio de reparación.
 
-## Estructura del repositorio
+## Cómo reproducir en google colab
 
-```
-proyecto-final-econometr-a-FINAL/
-├── README.md
-├── Data/
-│   ├── dataset 6.csv               ← base final (120 meses)
-│   └── Diccionario.md              ← diccionario, transformaciones y referencias
-└── notebook/
-    └── analisis_ventas_autos.ipynb ← análisis completo (anexo reproducible)
-```
-
-## Entregables
-
-| Entregable de la guía | Archivo |
-| --- | --- |
-| 1. Informe (5–8 páginas) | Pendiente |
-| 2. Anexo reproducible | [`notebook/analisis_ventas_autos.ipynb`](notebook/analisis_ventas_autos.ipynb) |
-| 3. Datos documentados | [`Data/dataset 6.csv`](Data/dataset%206.csv) y [`Data/Diccionario.md`](Data/Diccionario.md) |
-| 4. Presentación (8 min + 4 de preguntas) | Pendiente |
-
-## Cómo reproducir
-
-**En Google Colab (recomendado):** da clic en el botón "Abrir en Colab" de arriba y luego en *Entorno de ejecución → Ejecutar todas*. Los datos se leen automáticamente desde este repositorio.
-
-**En tu computadora:**
-
-```bash
-pip install numpy pandas matplotlib seaborn statsmodels scikit-learn
-jupyter notebook notebook/analisis_ventas_autos.ipynb
-```
-
-El análisis no usa números aleatorios, así que correrlo de nuevo da exactamente los mismos resultados.
+da clic en el botón "Abrir en Colab" de arriba y luego en Entorno de ejecución, Ejecutar todas. Los datos se leen automáticamente desde este repositorio.
 
 ## Lista de verificación de la guía
 
@@ -95,16 +67,7 @@ El análisis no usa números aleatorios, así que correrlo de nuevo da exactamen
 - [x] Se discuten incertidumbre, supuestos y límites de la inferencia.
 - [x] Se evalúan y contextualizan correlaciones y VIF.
 - [x] Código, datos y tablas permiten reproducir el análisis.
-- [ ] Todas las personas pueden explicar el trabajo y sus decisiones.
 
 ## Limitaciones
 
 Los resultados son asociaciones, no efectos causales. Las principales limitaciones son la posible causalidad inversa entre la tasa de interés y las ventas, variables omitidas como la escasez de semiconductores de 2021–2022, la tendencia común de varias series y el cambio de encuesta de empleo del INEGI en 2020.
-
-## Contribuciones del equipo
-
-| Integrante | Tareas |
-| --- | --- |
-| Euken | |
-| Álvaro Vázquez | |
-| Diego | |
