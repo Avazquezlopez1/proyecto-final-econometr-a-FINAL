@@ -3,7 +3,7 @@
 
 ## Descripción general
 
-El archivo `dataset.csv` tiene 120 observaciones mensuales (enero 2016 – diciembre 2025) y 19 columnas: 3 de identificación, la variable dependiente con su desglose y 13 explicativas. No tiene valores faltantes.
+El archivo data.csv tiene 120 observaciones mensuales (enero 2016 – diciembre 2025) y 19 columnas: 3 de identificación, la variable dependiente con su desglose y 13 explicativas. No tiene valores faltantes.
 
 | Elemento | Valor |
 | --- | --- |
@@ -45,20 +45,17 @@ Cada fila es una columna del archivo, en el mismo orden. El signo esperado es la
 
 Todas las series se recortaron a enero 2016 – diciembre 2025, el periodo en que todas tienen datos completos. Cada transformación se hizo con código y se puede reproducir.
 
-1. **Ventas de vehículos:** se sumaron por mes las ventas de todos los modelos de la hoja RAIAVL_VENTAS. Las celdas con "-" se tomaron como 0. Se conservaron las cantidades negativas que reporta INEGI (devoluciones de periodos anteriores). Los totales anuales coinciden con la tabla dinámica del archivo original.
+1. **Ventas de vehículos:** se sumaron por mes las ventas de todos los modelos. Las celdas con "-" se tomaron como 0. Se conservaron las cantidades negativas que reporta INEGI (devoluciones de periodos anteriores). 
 2. **Tasa objetivo:** la serie diaria se promedió por mes, así que refleja los cambios de tasa a mitad de mes.
 3. **Precios reales del INPC:** cada índice genérico se dividió entre el INPC general del mismo mes y se multiplicó por 100. Si sube, ese bien se encareció más que el promedio de la economía.
-4. **Crédito automotriz real:** el saldo en millones de pesos nominales se dividió entre el INPC general (base 2ª quincena de julio 2018 = 100) y se multiplicó por 100.
-5. **Series descartadas:** la inflación mensual, acumulada, subyacente y no subyacente (redundantes con la anual); el PIB anual (sin variación dentro del año; se sustituyó por el IGAE); la telefonía, electricidad, gas doméstico y los desgloses del transporte público (sin justificación teórica o redundantes); el genérico de motocicletas (empieza en julio de 2018).
-6. **Variables que se crean en el notebook:** el logaritmo de las ventas, 11 ficticias de mes (enero como referencia) y una ficticia de COVID para abril–junio de 2020.
+4. **Crédito automotriz real:** el saldo en millones de pesos nominales se dividió entre el INPC general y se multiplicó por 100.
+5. **Variables que se crean en el notebook:** el logaritmo de las ventas, 11 ficticias de mes (enero como referencia) y una ficticia de COVID para abril–junio de 2020.
 
 ## Notas metodológicas y limitaciones
 
 - **Cambio de encuesta en el empleo:** la desocupación y la informalidad vienen de la ENOE, salvo abril–junio de 2020 (encuesta telefónica ETOE) y julio 2020 – diciembre 2022 (ENOE nueva edición), según la nota de INEGI.
 - **Estacionalidad:** la informalidad, las remesas, las ventas y varios precios (por ejemplo, trámites vehiculares a inicio de año) no están desestacionalizados. Las ficticias de mes absorben ese patrón.
-- **Cifras preliminares:** el IGAE de los meses recientes es preliminar y puede revisarse.
-- **Desagregaciones del INPC:** INEGI advierte que los índices por genérico "solo tienen valor informativo".
-- **Cobertura del crédito:** el saldo automotriz solo incluye a la banca comercial; no cuenta las financieras de marca ni otros otorgantes no bancarios.
+- **Cobertura del crédito:** el saldo automotriz solo incluye a la banca comercial; no cuenta las financieras de marca ni otros no bancarios.
 - **Remesas en dólares:** están en dólares corrientes, sin convertir a pesos ni deflactar.
 - **Tendencias:** varias series tienen tendencia de largo plazo (crédito, remesas, seguro), lo que puede inflar el R² y las correlaciones.
 
