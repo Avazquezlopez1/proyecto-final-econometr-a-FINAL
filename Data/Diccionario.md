@@ -61,8 +61,6 @@ Todas las series se recortaron a enero 2016 – diciembre 2025, el periodo en qu
 
 ## Referencias
 
-Formato APA 7.ª edición. Todas las series se consultaron el 20 de noviembre de 2026.
-
 Banco de México. (2026a). *Balanza de pagos: Ingresos por remesas, remesas familiares totales (SE27803)* [Conjunto de datos]. Sistema de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.banxico.org.mx/SieInternet/
 
 Banco de México. (2026b). *Banca comercial, cartera vigente otorgada al sector privado no bancario (metodología 2018) (CF835): Crédito automotriz (SF266105)* [Conjunto de datos]. Sistema de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=19&accion=consultarCuadro&idCuadro=CF835&locale=es
