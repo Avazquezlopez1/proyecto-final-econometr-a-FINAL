@@ -59,18 +59,24 @@ Todas las series se recortaron a enero 2016 – diciembre 2025, el periodo en qu
 - **Remesas en dólares:** están en dólares corrientes, sin convertir a pesos ni deflactar.
 - **Tendencias:** varias series tienen tendencia de largo plazo (crédito, remesas, seguro), lo que puede inflar el R² y las correlaciones.
 
-## Fuentes y fechas de consulta
+## Referencias
 
-Las fechas vienen del encabezado de cada archivo descargado. Las que dicen "por confirmar" no estaban en el archivo: anótenlas al subirlo al repositorio.
+Formato APA 7.ª edición. Todas las series se consultaron el 20 de noviembre de 2026.
 
-| Serie | Institución y sistema | Fecha de consulta |
-| --- | --- | --- |
-| Ventas de vehículos ligeros (RAIAVL) | INEGI, Registro Administrativo de la Industria Automotriz de Vehículos Ligeros (publicación del 07/08/2026) | Por confirmar |
-| Inflación anual | Banco de México, SIE | 20/11/2026 |
-| Tasa de desocupación | INEGI, Banco de Información Económica (BIE) | 20/11/2026 |
-| Tasa objetivo | Banco de México, SIE | 20/11/2026 |
-| IGAE | INEGI, BIE | Por confirmar |
-| Precios por genérico del INPC | INEGI, [Índices de precios, INPC Nacional (mensual)](https://www.inegi.org.mx/app/indicesdepreciosv2/Estructura.aspx?idEstructura=112001700030&T=%C3%8Dndices%20de%20Precios%20al%20Consumidor&ST=INPC%20Nacional%20(mensual)) | 24/11/2026 |
-| Remesas | Banco de México, SIE, Balanza de pagos | 24/11/2026 |
-| Tasa de informalidad (TIL1) | INEGI, [BIE, clave 444673](https://www.inegi.org.mx/app/indicadores/?tm=3&ind=444673#D444673_3838) | 24/11/2026 |
-| Crédito automotriz | Banco de México, [SIE, cuadro CF835](https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=19&accion=consultarCuadro&idCuadro=CF835&locale=es) | 24/11/2026 |
+Banco de México. (2026a). *Balanza de pagos: Ingresos por remesas, remesas familiares totales (SE27803)* [Conjunto de datos]. Sistema de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.banxico.org.mx/SieInternet/
+
+Banco de México. (2026b). *Banca comercial, cartera vigente otorgada al sector privado no bancario (metodología 2018) (CF835): Crédito automotriz (SF266105)* [Conjunto de datos]. Sistema de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=19&accion=consultarCuadro&idCuadro=CF835&locale=es
+
+Banco de México. (2026c). *Índices de Precios al Consumidor y UDIS: Inflación, variación anual del INPC (SP30578)* [Conjunto de datos]. Sistema de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.banxico.org.mx/SieInternet/
+
+Banco de México. (2026d). *Tasa objetivo (SF61745)* [Conjunto de datos]. Sistema de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.banxico.org.mx/SieInternet/
+
+Instituto Nacional de Estadística y Geografía. (2026a). *Indicador Global de la Actividad Económica, series desestacionalizadas, base 2018* [Conjunto de datos]. Banco de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.inegi.org.mx/app/indicadores/?tm=3
+
+Instituto Nacional de Estadística y Geografía. (2026b). *Índice Nacional de Precios al Consumidor, base segunda quincena de julio 2018: INPC Nacional (mensual), por objeto del gasto* [Conjunto de datos]. Recuperado el 20 de noviembre de 2026, de https://www.inegi.org.mx/app/indicesdepreciosv2/Estructura.aspx?idEstructura=112001700030
+
+Instituto Nacional de Estadística y Geografía. (2026c). *Registro Administrativo de la Industria Automotriz de Vehículos Ligeros (RAIAVL): Venta al público de vehículos ligeros por marca, modelo, segmento y país de origen, enero 2005 – julio 2026* [Conjunto de datos]. Recuperado el 20 de noviembre de 2026, de https://www.inegi.org.mx/investigacion/datosprimarios/raiavl/
+
+Instituto Nacional de Estadística y Geografía. (2026d). *Tasa de desocupación, nacional, serie desestacionalizada (ENOE)* [Conjunto de datos]. Banco de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.inegi.org.mx/app/indicadores/?tm=3
+
+Instituto Nacional de Estadística y Geografía. (2026e). *Tasa de informalidad laboral 1 (TIL1), nacional, población total (ENOE), clave 444673* [Conjunto de datos]. Banco de Información Económica. Recuperado el 20 de noviembre de 2026, de https://www.inegi.org.mx/app/indicadores/?tm=3&ind=444673
